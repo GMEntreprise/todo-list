@@ -1,0 +1,115 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app-wrapper {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  max-width: 90%;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden; /* Empêche le débordement des éléments enfants */
+}
+
+.header h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.input-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px 0 0 5px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/********** TODOS-LIST **********/
+
+.todos-container {
+  margin-top: 20px;
+}
+
+/* List styles */
+.todos-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Item styles */
+.todo-item {
+  background-color: #e0e0e0;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.3s ease;
+}
+
+.todo-item.completed {
+  text-decoration: line-through;
+  background-color: #d1ffd6;
+}
+
+.todo-item:not(.completed):hover {
+  background-color: #d9d9d9;
+}
+
+/* Button CRUD */
+
+/* Boutons pour les tâches */
+.task-btn {
+  background-color: transparent;
+  border: none;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.3s;
+  margin-right: 3px;
+  padding: 0 10px;
+}
+
+.task-btn:hover {
+  background-color: transparent;
+}
